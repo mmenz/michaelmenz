@@ -5,11 +5,11 @@ int time = 3;
 void setup() {
   img = loadImage("profile.png");
   size(340, 356);
-  smallPoint = 1;
+  smallPoint = 3;
   largePoint = 40;
   imageMode(CENTER);
   noStroke();
-   background(0,0);
+  background(255);
 }
 
 void draw() { 
@@ -19,7 +19,8 @@ void draw() {
     int y = int(random(img.height));
     color pix = img.get(x, y);
     fill(pix, 128);
-    ellipse(x+20, y+20, pointillize, pointillize);
+    textSize(pointillize);
+    text(str(int(random(10))),x,y);
   }
   time += 1;
 }
